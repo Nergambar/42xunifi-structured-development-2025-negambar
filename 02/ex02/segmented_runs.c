@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "segmented_runs.h"
 
 int count_segments(const int *arr, int size)
