@@ -1,0 +1,54 @@
+Use Case: Expense Tracker Application
+
+1. **Use Case Name**: Load Expenses
+   - **Actor**: User
+   - **Description**: The user provides a filename to load expense records from a text file.
+   - **Preconditions**: The file exists and is accessible.
+   - **Postconditions**: Valid expense records are loaded into memory; invalid records are skipped with warnings.
+   - **Main Flow**:
+     1. User runs the application and inputs the filename.
+     2. System attempts to open the file.
+     3. System reads each line and validates the format.
+     4. Valid records are stored; invalid records trigger warnings.
+
+2. **Use Case Name**: Filter Expenses
+   - **Actor**: User
+   - **Description**: The user selects a method to filter the loaded expense records.
+   - **Preconditions**: Expenses have been loaded into memory.
+   - **Postconditions**: A filtered list of expenses is generated based on user criteria.
+   - **Main Flow**:
+     1. User is prompted to choose a filter method (category, date range, or all).
+     2. User inputs the filter criteria.
+     3. System validates the input.
+     4. System filters the records accordingly.
+
+3. **Use Case Name**: Display Summary
+   - **Actor**: User
+   - **Description**: The user requests a summary of the filtered expenses.
+   - **Preconditions**: Expenses have been filtered.
+   - **Postconditions**: A summary report is displayed to the user.
+   - **Main Flow**:
+     1. User requests a summary of the filtered expenses.
+     2. System calculates total records, total amount spent, and average expense.
+     3. System groups expenses by category and calculates percentages.
+     4. Summary is displayed to the user.
+
+4. **Use Case Name**: Handle Invalid Input
+   - **Actor**: User
+   - **Description**: The user provides invalid input during filtering or date selection.
+   - **Preconditions**: User is prompted for input.
+   - **Postconditions**: User is re-prompted until valid input is provided.
+   - **Main Flow**:
+     1. User inputs data.
+     2. System checks for validity.
+     3. If invalid, system displays an error message and re-prompts the user.
+
+5. **Use Case Name**: Exit Application
+   - **Actor**: User
+   - **Description**: The user chooses to exit the application.
+   - **Preconditions**: User is in the main menu or after viewing a summary.
+   - **Postconditions**: The application terminates gracefully.
+   - **Main Flow**:
+     1. User selects the option to exit.
+     2. System cleans up allocated memory.
+     3. Application closes.

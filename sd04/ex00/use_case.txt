@@ -1,0 +1,45 @@
+Use Case Scenarios for the Library System
+
+1. **Valid Input - Search by Title**
+   - **Scenario**: The user wants to find a book by its title.
+   - **Input**: "The Great Gatsby"
+   - **Expected Outcome**: The program searches for the title "The Great Gatsby" in the catalog and displays the matching book(s) along with their details.
+
+2. **Valid Input - Search by Author**
+   - **Scenario**: The user wants to find books written by a specific author.
+   - **Input**: "F. Scott Fitzgerald"
+   - **Expected Outcome**: The program searches for books authored by "F. Scott Fitzgerald" and displays all matching entries.
+
+3. **Case Insensitivity**
+   - **Scenario**: The user searches for a book title with different casing.
+   - **Input**: "the great gatsby"
+   - **Expected Outcome**: The program recognizes the input as a match for "The Great Gatsby" and displays the corresponding book details.
+
+4. **Trimming Input**
+   - **Scenario**: The user accidentally includes leading or trailing spaces in their search.
+   - **Input**: "   Moby Dick   "
+   - **Expected Outcome**: The program trims the input and searches for "Moby Dick", displaying the matching book if found.
+
+5. **Invalid Input - Empty Search**
+   - **Scenario**: The user submits an empty search query.
+   - **Input**: ""
+   - **Expected Outcome**: The program prompts the user to enter a valid search term again.
+
+6. **Invalid Input - Malformed Line in Catalog**
+   - **Scenario**: The catalog file contains a line that is missing fields.
+   - **Input**: "1,The Catcher in the Rye"
+   - **Expected Outcome**: The program skips this line, issues a warning about the malformed entry, and continues processing the rest of the catalog.
+
+7. **No Matches Found**
+   - **Scenario**: The user searches for a title or author that does not exist in the catalog.
+   - **Input**: "Unknown Book Title"
+   - **Expected Outcome**: The program displays a message indicating that no matches were found.
+
+8. **Memory Management**
+   - **Scenario**: The user finishes their search and exits the program.
+   - **Expected Outcome**: The program frees all allocated memory for the book entries and exits cleanly without memory leaks.
+
+9. **Maximum Capacity**
+   - **Scenario**: The catalog file contains more than 1000 valid books.
+   - **Input**: A catalog file with 1001 valid entries.
+   - **Expected Outcome**: The program reads only the first 1000 entries, issues a warning about the excess entries, and stores them for searching.

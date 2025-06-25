@@ -1,0 +1,43 @@
+Core Requirements for the Contact Management System:
+
+1. **Data Structure**:
+   - Define a `Contact` structure with the following fields:
+     - Integer ID
+     - Name (string)
+     - Phone (string)
+     - Email (string)
+     - City (string)
+     - Address (string)
+
+2. **File Handling**:
+   - Load contacts from a specified CSV file.
+   - Save contacts back to the same CSV file, using a temporary file for safety.
+
+3. **Validation**:
+   - Ensure ID is a positive integer and unique.
+   - Name and city must be non-empty after trimming whitespace.
+   - Phone must contain only digits and typical symbols, with at least one digit.
+   - Email must contain one '@' with non-empty local and domain parts, and at least one dot in the domain.
+   - Address may be empty.
+   - Skip invalid lines with a warning without crashing the program.
+
+4. **User Interaction**:
+   - Implement a menu loop with options:
+     - List all contacts
+     - Search contacts by name or city substring
+     - Add a new contact
+     - Update an existing contact
+     - Delete a contact
+     - Save and exit
+   - Re-prompt for invalid input.
+
+5. **Memory Management**:
+   - Track the maximum ID of loaded contacts.
+   - Free allocated memory for contacts when no longer needed.
+
+6. **Error Handling**:
+   - Handle file opening errors gracefully.
+   - Report any write errors during the save process.
+
+7. **Documentation**:
+   - Provide clear documentation in the README.md file, including setup instructions and usage guidelines.
